@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang=fr dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Balise meta qui sert à mettre en place le responsive pour adapter la page à tous les supports -->
+  <link rel="stylesheet" href="assets\css\style.css" />
+  <script src="https://kit.fontawesome.com/b44ae913bc.js" crossorigin="anonymous"></script> <!-- le lien Fontawesome pour les pictogrammes -->
+  <!-- Faut linker la police si tu l'installes pas, c'est le mieux pour être sûr que les gens la voient, si c'est en local c'est un peu mort mdr -->
+  <title>Exercice Part 3 - Voyage & Co.</title>
+</head>
+<body>
+  <header>
+    <h1>Voyage & Co.</h1> <!-- Voir Fontawesome pour les icones/pictogrammes de la barre de recherche ou autres, images libres de droit sur canvas ou freepik -->
+  </header>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Destinations</a></li>
+      <li><a href="#">Réservations</a></li>
+      <li><a href="#">Contact</a></li>
+      <li>
+        <form action="index.html" method="post">
+          <input type="search" name="" value="" placeholder="Recherche" />
+          <button type="submit" name="button"><i class="fas fa-search fa-2x"></i></button>
+        </form>
+      </li>
+    </ul>
+    <div id="navbarresponsive"> <!-- Menu burger visible seulement en responsive -->
+      <i class="fas fa-bars fa-2x"></i>">
+    </div>
+  </nav>
+
+  <section id="présentation">
+    <p>Bienvenue sur Voyage & Co. Des voyages, et bien plus.</p> <!-- J'étais pas inspiré pour le texte -->
+  </section>
+
+  <section id="travels">
+    <article class="travelbox">
+      <img src="assets\img\Suède2.jpg" alt="Suède"> <!-- alt=description d'image par texte -->
+      <h2>Sub 2 PewDz</h2>
+      <p>pewdiepie best youtuber</p>
+    </article>
+    <article class="travelbox">
+      <img src="assets\img\Tokyo2.jpg" alt="Tokyo Akihabara">
+      <h2>Rising Sun</h2>
+      <p>c tro bo</p>
+    </article>
+    <article class="travelbox">
+      <img src="assets\img\Irlande2.jpg" alt="Paysage Irlandais">
+      <h2>Kiss me i'm Irish</h2>
+      <p>j'aime la bière</p>
+    </article>
+  </section>
+</body>
+</html>

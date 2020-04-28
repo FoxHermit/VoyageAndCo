@@ -1,0 +1,137 @@
+header{
+  background-image: url("../img/header.jpg"); /* J'attribue une image de fond sur ma balise header */
+  background-size: cover; /* Je lui demande de couvrir l'ensemble de ma page */
+  height: 450px; /* Je lui donne une hauteur fixe pour faire apparaître une partie de l'image */
+  display: flex; /* La flexbox va me permettre d'utiliser "justify-items" et "align-items" pour placer les blocks sur le site, et vu que je prends la balise parent, tout suit */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  border: 2px solid black;
+}
+h1{
+  color: black;
+  font-family: Comic Sans MS; /* Il vaut mieux utiliser des polices trouvables sur Google Font, les polices custom DaFont sont pas forcément trouvées sur les sites, faut le privilégier pour le graphisme et faut faire gaffe aux droits d'auteurs */
+  font-size: 50px;
+}
+
+/* Barre de navigation */
+
+#navbar{
+background-color: black;
+}
+#navbarresponsive{
+  display: none;
+}
+#navbar ul{ /* Toujours séléctionner l'id puis les items/balises pour les modifs ordonnées, on s'y retrouve mieux */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  margin: 0px;
+  align-items: center;
+}
+#navbar li{
+  list-style-type: none;
+}
+#navbar a{
+  color: white;
+  font-family: Comic Sans MS;
+  text-decoration: none;
+  font-size: 18px;
+}
+#navbar a:hover{ /* Quand tu passes la souris sur un bouton ça change la couleur c'est magique putain faut juste écrire :hover */
+  color: black;
+  background-color: white;
+}
+i{ /* Couleur du pictogramme */
+  color: lightblue;
+}
+i:hover{
+  color: red;
+  background-color: black;
+}
+input{
+  padding: 4px;
+  border-radius: 4px
+}
+button{
+  border: 1px;
+  border-color: lightblue;
+  background-color: black;
+}
+#navbar form{
+  display: flex;
+  align-items: center;
+}
+
+/* Suite de la page */
+
+body{
+  background-color: white;
+}
+#présentation{
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+#présentation p{
+  font-family: Comic Sans MS;
+  font-size: 30px;
+  text-align: center;
+  margin: 3% 0; /* 1ere veleur = axe vertical, 2e valeur = axe horizontal, on peut mettre 4 valeurs aussi pour haut-bas-gauche-droite, marche aussi avec padding */
+}
+
+/* Section article */
+
+#travels{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#travels img{
+  width: 100%; /* Il vaut mieux utiliser du pourcentage que du pixel quand on fait du responsive */
+}
+.travelbox{
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  background-color: tan;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 1%
+}
+#travels h2{
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+#travels p{
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 480px){ /* Pour tous les écrans dont la largeur max est de 480px, ça va changer le comportement */
+  #navbar ul{ /* En gros dans le media tu réécris le CSS de tout c'que tu modifies oklm */
+    flex-direction: column; /* On peut aussi faire un design complètement différent en responsive, c'est rigolo */
+    display: none;
+  }
+  #travels{
+    flex-direction: column;
+  }
+  #navbarresponsive{
+  display: flex;
+  justify-content: flex-end;
+  }
+  #navbarresponsive i{
+    margin: 1% 2%;
+    border: 2px solid lightblue;
+    padding: 1%;
+    border-radius: 4px;
+  }
+  #navbarresponsive i:hover{
+    border-color: red;
+  }
+}
